@@ -22,7 +22,8 @@ a8dc4e.png)
 ## ⚙️ 3. Security Implementation (WAF Configuration)
 Enforcing granular traffic filtering and customized managed rule sets.
 
-![WAF Configuration](image_a8dc86.jpg)
+![WAF Configuration](image_<img width="1024" height="452" alt="image" src="https://github.com/user-attachments/assets/d03db4c1-2dc4-4b35-8656-9d8c54e087ff" />
+a8dc86.jpg)
 
 **Technical Detail:** I deployed the `AWSManagedRulesSQLiRuleSet` and configured the action to "Block". To ensure comprehensive coverage, I enabled deep packet inspection across Query Arguments, HTTP Body, and Cookies, effectively closing common bypass vectors.
 
@@ -34,14 +35,16 @@ Verifying the efficacy of the implemented security controls through active testi
 ## 📝 5. Terminal Execution Logs (PoC)
 Verbose terminal analysis capturing the handshake and mitigation response.
 
-![Terminal Execution Logs](image_a8dca5.jpg)
+![Terminal Execution Logs](image_<img width="1024" height="615" alt="image" src="https://github.com/user-attachments/assets/a2f51be1-bd60-4dc4-b106-6c73d275e8ea" />
+a8dca5.jpg)
 
 **Technical Detail:** This execution log captures the raw curl verbose output. It verifies the complete TLS 1.3 handshake and confirms the server-side rejection with a `{"message":"Forbidden"}` JSON response, providing low-level proof of the mitigation success.
 
 ## 📊 6. Real-Time Observability & Monitoring
 Leveraging cloud-native analytics for threat intelligence and traffic monitoring.
 
-![Real-Time Observability](image_a8dccd.png)
+![Real-Time Observability](image_<img width="1662" height="612" alt="image" src="https://github.com/user-attachments/assets/9702f939-3c3b-419f-969d-984ea4838f3a" />
+a8dccd.png)
 
 **Technical Detail:** The CloudWatch dashboard provides real-time visibility into attack telemetry. The visible spikes represent blocked requests, with automated logging tagging the SQLiRuleSet as the specific trigger for termination.
 
